@@ -13,31 +13,12 @@ paths:
   /:
     get:
       operationId: get
-      parameters:
-      - name: name
-        in: query
-        required: true
-        schema:
-          type: string
       responses:
         "200":
           description: Ok
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Greeting'
-components:
-  schemas:
-    Greeting:
-      required:
-      - from
-      - message
-      - to
-      type: object
-      properties:
-        from:
-          type: string
-        to:
-          type: string
-        message:
-          type: string
+                type: array
+                items:
+                  type: string
