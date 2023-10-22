@@ -58,6 +58,8 @@ service / on new http:Listener(8090) {
             response.projectKeys = ["csub"];
         } else if (user == "user4@abc.com") {
             response.projectKeys = [];
+        } else if (user == "john@example.com") {
+            response.projectKeys = ["examplesub"];
         } else {
             response.isValidCustomer = false;
         }
